@@ -1,0 +1,48 @@
+/** @OnlyCurrentDoc */
+function QuickbooksFix() {
+  // get data from sheet
+  var sheet = SpreadsheetApp.getActive().getActiveSheet();
+  var data = sheet.getDataRange().getValues();
+
+  // remove headers from data
+  var headers = data.shift();
+
+  // remove "total" lines
+  data = data.filter(function(row) {
+    var firstCell = row[0];
+    var firstWord = firstCell.split(" ")[0];
+    return firstWord !== "Total";
+  });
+
+  // extend account names to fill in blanks
+  var currAcount = data[0][0];
+  for (var i = 0; i < data.length; i++) {
+    var row = data[i];
+    if (row[0] === "") {
+      row[0] = currAcount;
+    } else {
+      currAcount = row[0];
+    }
+  }
+
+  // remove blank acct rows
+  data = data.filter(function(row) {
+    var vals = row.slice(1, 9);
+    var filtered = vals.filter(function(x) {
+      return x !== "";
+    });
+    var hasData = filtered.length > 0;
+    Logger.log(hasData);
+    // keep rows where not all values are blank
+    return hasData;
+  });
+
+  // add headers back to data
+  headers[0] = "Account";
+  data.unshift(headers);
+
+  // clear sheet & write data
+  sheet.clear();
+  var range = sheet.getRange(1, 1, data.length, data[0].length);
+  range.setValues(data);
+}
