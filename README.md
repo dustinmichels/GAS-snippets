@@ -1,3 +1,5 @@
 # GAS Snippets
 
-Some reusable Google Apps Script snippets you can use in your proejcts.
+Sharing some reusable [Google Apps Script](https://developers.google.com/apps-script/) snippets with the world.
+
+![GAS logo](./logo.png)
