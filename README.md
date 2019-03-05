@@ -14,7 +14,7 @@ Sharing some reusable [Google Apps Script](https://developers.google.com/apps-sc
 
 This is a collection of scripts I have written, made as legible and reusable as possible. Feel free to use them in your projects.
 
-## How to use this site
+## How to use
 
 I usually develop scripts locally, in TypeScript, then compile them into GAS-comptatible JavaScript using [clasp](https://developers.google.com/apps-script/guides/clasp). When I share code here, I will try to share the original TypeScript version and the compiled, JavaScript version.
 
@@ -30,9 +30,15 @@ This site was created/mainted by [Dustin Michels](http://dustinmichels.com/).
 
 ## Dev notes
 
-### Compiling JS files
+```bash
+# clone project
+https://github.com/dustinmichels/GAS-snippets.git
 
-You can build GAS-comptatible JavaScript from typescript files locally, using by running:
+# install dependencies
+npm install
+```
+
+Place new code snippets in their own folder within the `snippets` folder. If written in typscript, put the TS in a `src` folder and build the GAS-comptatible JavaScript locally, using by running:
 
 ```bash
 node build {snippet dir}.
