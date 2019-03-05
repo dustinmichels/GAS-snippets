@@ -1,5 +1,7 @@
 # GAS Snippets
 
+![](https://img.shields.io/website-up-down-green-red/https/dustinmichels.github.io/GAS-snippets/.svg)
+
 Sharing some reusable [Google Apps Script](https://developers.google.com/apps-script/) snippets with the world.
 
 ![GAS logo](./media/logo.png ':size=300')
