@@ -32,8 +32,6 @@ function QuickbooksFix() {
       return x !== "";
     });
     var hasData = filtered.length > 0;
-    Logger.log(hasData);
-    // keep rows where not all values are blank
     return hasData;
   });
 
