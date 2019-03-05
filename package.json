@@ -1,0 +1,23 @@
+{
+  "name": "gas-snippets",
+  "version": "1.0.0",
+  "description": "Sharing some reusable [Google Apps Script](https://developers.google.com/apps-script/) snippets with the world.",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dustinmichels/GAS-snippets.git"
+  },
+  "author": "Dustin Michels",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dustinmichels/GAS-snippets/issues"
+  },
+  "homepage": "https://github.com/dustinmichels/GAS-snippets#readme",
+  "dependencies": {
+    "@types/google-apps-script": "0.0.38",
+    "ts2gas": "^1.6.0"
+  }
+}
