@@ -1,6 +1,23 @@
-# email-sheet-as-pdf
+# Email Sheet as PDF
 
-Convert a Google Sheet into a PDF then email it out.
+[last_edited](../_updated.md ':include')
 
-- If you use clasp, use the TypeScript in the `src` folder.
-- If not, just take the plain JavaScript in the `build` folder.
+## About
+
+Here is some code I have used to convert a Google Sheet into a PDF and email it out.
+
+[note](../_note.md ':include')
+
+## Code
+
+### `email.ts`
+
+[email.ts](src/email.ts ':include :type=code')
+
+### `email.js`
+
+[email.ts](build/email.js ':include :type=code')
+
+### `email.html`
+
+[email.ts](src/email.html ':include :type=code')

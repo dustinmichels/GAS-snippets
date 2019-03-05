@@ -1,6 +1,12 @@
-# quickbooks-macro
+# Quickbooks Macro
+
+[last_edited](../_updated.md ':include')
+
+## About
 
 Quickbooks allows users to export the general ledger as CSV in an annoying format.
+
+Here is a macro you can add to a Google Sheet to rapidly convert this hideous format:
 
 |                            | Type | Date     | Num | Adj | Name | Memo | Split                   | Debit | Credit | Balance |
 | -------------------------- | ---- | -------- | --- | --- | ---- | ---- | ----------------------- | ----- | ------ | ------- |
@@ -12,7 +18,7 @@ Quickbooks allows users to export the general ledger as CSV in an annoying forma
 |                            | Bill | 1/3/2019 | 125 |     | name |      | 2000 · Accounts Payable | 200   |        | 500     |
 | Total 5013 · Another Thing |      |          |     |     |      |      |                         | 500   | 0      | 500     |
 
-Here is a google sheets macro that will transform that structure into this, [tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) format:
+Into into this lovely, [tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) format:
 
 | Account              | Type | Date     | Num | Adj | Name | Memo | Split                   | Debit | Credit | Balance |
 | -------------------- | ---- | -------- | --- | --- | ---- | ---- | ----------------------- | ----- | ------ | ------- |
@@ -20,14 +26,14 @@ Here is a google sheets macro that will transform that structure into this, [tid
 | 5013 · Another Thing | Bill | 1/2/2019 | 124 |     | name |      | 2000 · Accounts Payable | 200   |        | 300     |
 | 5013 · Another Thing | Bill | 1/3/2019 | 125 |     | name |      | 2000 · Accounts Payable | 200   |        | 500     |
 
-Changes:
+What changed?
 
 - First column named "Account"
 - Account names copied downward to fill in blanks
 - 'Total' rows and 'account header' rows deleted
 - Accounts with no transactions removed
 
-## Steps
+## Setting up
 
 1. **Record Macro.** Press "tools > macros > record macro" and record an arbitrary gesture (eg, enter a value in a cell). Name the macro "Quickbooks Fix". Under your edit.
 
@@ -36,3 +42,9 @@ Changes:
 3. **Paste code.** Paste the contents of `macros.js` in your `macros.gs` file, overwriting what was there.
 
 4. **Run macro.** "Tools > Macros > Quickbooks Fix."
+
+## Code
+
+### `macros.js`
+
+[email.ts](macros.js ':include :type=code')
