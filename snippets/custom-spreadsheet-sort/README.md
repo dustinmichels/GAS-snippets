@@ -14,4 +14,4 @@ Adjust and use this `sortData` function to sort a range of cells in a google she
 
 ### `Code.js`
 
-[email.ts](code.js ':include :type=code')
+[Code.js](Code.js ':include :type=code')
