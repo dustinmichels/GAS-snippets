@@ -1,1 +1,1 @@
-?> _Note:_  If you use [clasp](https://developers.google.com/apps-script/guides/clasp), copy the TypeScript files. If not, just copy code from the JavaScript files, directly into your `.gs` files.
+?> _Note:_  If you use [clasp](https://developers.google.com/apps-script/guides/clasp), copy the TypeScript files into your local project. If not, just copy code from the JavaScript files directly into your `.gs` files in the online editor.
