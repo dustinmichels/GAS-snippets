@@ -30,6 +30,8 @@ This site was created/mainted by [Dustin Michels](http://dustinmichels.com/).
 
 ## Dev notes
 
+This section is just for people developing/maintaining this project, not using the scripts.
+
 ```bash
 # clone project
 https://github.com/dustinmichels/GAS-snippets.git
