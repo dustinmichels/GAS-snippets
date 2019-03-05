@@ -11,7 +11,7 @@ var mapping = {
 
 // define range of values to sort & which one is "status"
 var sortRange = "A2:B20";
-var statusRow = 0;
+var statusCol = 0;
 
 /**
  * Sort defined range by status, using defined mapping
@@ -42,8 +42,8 @@ function sortData() {
  */
 function sortFcn_(rowA, rowB) {
   // get "status" from row (array lookup by integer)
-  var aStatus = rowA[statusRow];
-  var bStatus = rowB[statusRow];
+  var aStatus = rowA[statusCol];
+  var bStatus = rowB[statusCol];
 
   // convert status msg to value (object lookup by key)
   var aValue = mapping[aStatus];
