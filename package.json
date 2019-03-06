@@ -4,7 +4,7 @@
   "description": "Sharing some reusable [Google Apps Script](https://developers.google.com/apps-script/) snippets with the world.",
   "main": "build.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require ts-node/register snippets/**/test/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -16,8 +16,14 @@
     "url": "https://github.com/dustinmichels/GAS-snippets/issues"
   },
   "homepage": "https://github.com/dustinmichels/GAS-snippets#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
     "@types/google-apps-script": "0.0.38",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3333",
     "ts2gas": "^1.6.0"
   }
 }

@@ -30,3 +30,7 @@ When a new code snippet is added:
 
 - Give it a `README.md` following the structure of the existing projects.
 - Update `_sidebar.md`
+
+## Testing
+
+Run `npm run test` to run test files, using Mocha/Chai.
