@@ -7,9 +7,8 @@ var module = module || { exports: exports };
 // Set this configuration object to meet your needs
 var CONF = {
     target: {
-        ssId: "abc",
-        sheetName: "export",
-        sheetId: 123 // id of target sheet
+        ssId: "idGoesHere",
+        sheetName: "sheetNameHere"
     },
     email: {
         recipients: "example@gmail.com, example2@gmail.com",
@@ -25,7 +24,6 @@ function emailSheetAsPdf() {
     var ss = SpreadsheetApp.openById(CONF.target.ssId);
     // 2. get target sheet by name or id (choose one)
     var sheet = ss.getSheetByName(CONF.target.sheetName);
-    // let sheet = getSheetById_(ss, CONF.target.sheetId);
     // 3. make sheet into pdf
     var pdf = getPdfBlob(sheet, "My Pdf", true);
     // 4. Email pdf
@@ -84,11 +82,4 @@ function emailPdf(pdf, recipients, subject) {
 function getHtmlBody_() {
     var t = HtmlService.createTemplateFromFile("email");
     return t.evaluate().getContent();
-}
-// ------------------------------
-// Other helper functions
-// ------------------------------
-/** Get sheet by id */
-function getSheetById_(ss, id) {
-    return ss.getSheets().filter(function (s) { return s.getSheetId() === id; })[0];
 }
