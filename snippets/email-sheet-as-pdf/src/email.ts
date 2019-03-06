@@ -101,3 +101,5 @@ function getHtmlBody_() {
   let t = HtmlService.createTemplateFromFile("email");
   return t.evaluate().getContent();
 }
+
+export {getTodayString_}
