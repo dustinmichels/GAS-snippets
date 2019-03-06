@@ -45,6 +45,17 @@ What changed?
 
 ## Code
 
+### `macros.ts`
+
+[email.ts](src/macros.ts ':include :type=code')
+
 ### `macros.js`
 
-[email.ts](macros.js ':include :type=code')
+[email.ts](build/macros.js ':include :type=code')
+
+## Code Coverage
+
+Unit tests were written for this code using the [mocha](https://mochajs.org/) testing framework & [chai](https://www.chaijs.com/) assertion library. Here is a summary of test results, generated with [Istanbul](https://istanbul.js.org/).
+
+[tests](../../coverage/quickbooks-macro/src/index.html ':include')
+

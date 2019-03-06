@@ -4,11 +4,22 @@ function QuickbooksFix() {
   var sheet = SpreadsheetApp.getActive().getActiveSheet();
   var data = sheet.getDataRange().getValues();
 
+  // wiggle data into desired form
+  data = cleanData_(data);
+
+  // clear sheet & write data
+  sheet.clear();
+  var range = sheet.getRange(1, 1, data.length, data[0].length);
+  range.setValues(data);
+}
+
+/** Helper function to macro */
+function cleanData_(data: any[][]) {
   // remove headers from data
   var headers = data.shift();
 
   // remove "total" lines
-  data = data.filter(function(row) {
+  data = data.filter(row => {
     var firstCell = row[0];
     var firstWord = firstCell.split(" ")[0];
     return firstWord !== "Total";
@@ -26,7 +37,7 @@ function QuickbooksFix() {
   }
 
   // remove blank acct rows
-  data = data.filter(function(row) {
+  data = data.filter(row => {
     var vals = row.slice(1, 9);
     var filtered = vals.filter(function(x) {
       return x !== "";
@@ -39,8 +50,7 @@ function QuickbooksFix() {
   headers[0] = "Account";
   data.unshift(headers);
 
-  // clear sheet & write data
-  sheet.clear();
-  var range = sheet.getRange(1, 1, data.length, data[0].length);
-  range.setValues(data);
+  return data;
 }
+
+export { cleanData_ };
