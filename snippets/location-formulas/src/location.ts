@@ -58,4 +58,4 @@ function DMS_to_DD(dmsStr: string): number {
   }
 }
 
-export { GET_LAT, GET_LON, DMS_to_DD };
+export { GET_LAT, GET_LON };

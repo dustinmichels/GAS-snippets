@@ -4,7 +4,24 @@
   "description": "Sharing some reusable [Google Apps Script](https://developers.google.com/apps-script/) snippets with the world.",
   "main": "build.js",
   "scripts": {
-    "test": "mocha --require ts-node/register snippets/**/test/**/*.ts"
+    "test": "nyc mocha --require ts-node/register snippets/**/test/**/*.ts"
+  },
+  "nyc": {
+    "include": [
+      "snippets/**/src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "reporter": [
+      "text-summary",
+      "text",
+      "html"
+    ],
+    "all": true
   },
   "repository": {
     "type": "git",
@@ -22,6 +39,7 @@
     "@types/google-apps-script": "0.0.38",
     "chai": "^4.2.0",
     "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
     "ts-node": "^8.0.2",
     "typescript": "^3.3.3333",
     "ts2gas": "^1.6.0"
