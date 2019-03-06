@@ -2,7 +2,7 @@
 
 [last_edited](../_updated.md ':include')
 
-## About
+## Intro
 
 Here is some code I have used to convert a Google Sheet into a PDF and email it out.
 

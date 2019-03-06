@@ -2,7 +2,7 @@
 
 [last_edited](../_updated.md ':include')
 
-## About
+## Intro
 
 Quickbooks allows users to export the general ledger as CSV in an annoying format.
 

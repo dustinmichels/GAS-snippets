@@ -2,7 +2,7 @@
 
 [last_edited](../_updated.md ':include')
 
-## About
+## Intro
 
 Adjust and use this `sortData` function to sort a range of cells in a google sheet in a customized way. The way this example is set up, we assume the column we want to sort by contains a string representing a "status" (yes, no, pending, or withdrawn). You must define:
 

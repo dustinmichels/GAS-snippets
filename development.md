@@ -30,4 +30,3 @@ When a new code snippet is added:
 
 - Give it a `README.md` following the structure of the existing projects.
 - Update `_sidebar.md`
-- Update `snippets/README.md`
