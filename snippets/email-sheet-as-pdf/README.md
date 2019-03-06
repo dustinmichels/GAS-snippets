@@ -1,4 +1,4 @@
-# Email Sheet as PDF
+# Email sheet as PDF
 
 [last_edited](../_updated.md ':include')
 

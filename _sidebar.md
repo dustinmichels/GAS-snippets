@@ -1,3 +1,4 @@
-* [Email Sheet As PDF](snippets/email-sheet-as-pdf/)
-* [Quickbooks Macro](snippets/quickbooks-macro/)
-* [Custom Spreadsheet Sort](snippets/custom-spreadsheet-sort/)
+* [Email sheet as PDF](snippets/email-sheet-as-pdf/)
+* [Quickbooks macro](snippets/quickbooks-macro/)
+* [Custom spreadsheet sort](snippets/custom-spreadsheet-sort/)
+* [Get sheet by ID](snippets/get-sheet-by-id/)

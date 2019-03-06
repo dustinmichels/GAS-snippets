@@ -1,4 +1,4 @@
-# Custom Spreadsheet Sort
+# Custom spreadsheet sort
 
 [last_edited](../_updated.md ':include')
 

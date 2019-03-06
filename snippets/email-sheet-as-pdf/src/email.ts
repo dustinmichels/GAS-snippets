@@ -10,9 +10,8 @@ type GBlob = GoogleAppsScript.Base.Blob;
 // Set this configuration object to meet your needs
 const CONF = {
   target: {
-    ssId: "abc", // ID of target spreadsheet
-    sheetName: "export", // name of target sheet
-    sheetId: 123 // id of target sheet
+    ssId: "idGoesHere", // ID of target spreadsheet
+    sheetName: "sheetNameHere", // name of target sheet
   },
   email: {
     recipients: "example@gmail.com, example2@gmail.com",
@@ -31,7 +30,6 @@ function emailSheetAsPdf() {
 
   // 2. get target sheet by name or id (choose one)
   let sheet = ss.getSheetByName(CONF.target.sheetName);
-  // let sheet = getSheetById_(ss, CONF.target.sheetId);
 
   // 3. make sheet into pdf
   let pdf = getPdfBlob(sheet, "My Pdf", true);
@@ -102,13 +100,4 @@ function emailPdf(pdf: GBlob, recipients: string, subject: string) {
 function getHtmlBody_() {
   let t = HtmlService.createTemplateFromFile("email");
   return t.evaluate().getContent();
-}
-
-// ------------------------------
-// Other helper functions
-// ------------------------------
-
-/** Get sheet by id */
-function getSheetById_(ss: SS, id: number): Sheet {
-  return ss.getSheets().filter(s => s.getSheetId() === id)[0];
 }

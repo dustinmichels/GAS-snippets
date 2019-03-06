@@ -1,4 +1,4 @@
-# Quickbooks Macro
+# Quickbooks macro
 
 [last_edited](../_updated.md ':include')
 
