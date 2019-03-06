@@ -4,11 +4,11 @@
 
 ## Intro
 
-Here is some code I have used to convert a Google Sheet into a PDF and email it out.
-
-[note](../_note.md ':include')
+Convert a Google Sheet into a PDF and email it out to designated recipients.
 
 ## Code
+
+[note](../_note.md ':include')
 
 ### `email.ts`
 
