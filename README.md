@@ -6,6 +6,10 @@ Sharing some reusable [Google Apps Script](https://developers.google.com/apps-sc
 
 ![GAS logo](./media/logo.png ':size=300')
 
+## Contents
+
+[contents](_sidebar.md ':include')
+
 ## About
 
 [Google Scripts](https://developers.google.com/apps-script/) allow you to combine Google services in powerful ways using JavaScript. Youn can write scripts to:
