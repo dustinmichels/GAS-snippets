@@ -6,6 +6,8 @@
 
 It is common to reference a sheet by it's name, but a sheet can easily be renamed, breaking your script. For this reason, it can be prefereable to get a sheet by it's unique ID.
 
+[note](../_note.md ':include')
+
 ## Code
 
 ### `code.ts`
