@@ -14,17 +14,15 @@ function QuickbooksFix() {
 }
 
 /** Helper function to macro */
-function cleanData_(data: any[][]) {
+function cleanData_(data) {
   // remove headers from data
   var headers = data.shift();
-
   // remove "total" lines
-  data = data.filter(row => {
+  data = data.filter(function(row) {
     var firstCell = row[0];
     var firstWord = firstCell.split(" ")[0];
     return firstWord !== "Total";
   });
-
   // extend account names to fill in blanks
   var currAcount = data[0][0];
   for (var i = 0; i < data.length; i++) {
@@ -35,9 +33,8 @@ function cleanData_(data: any[][]) {
       currAcount = row[0];
     }
   }
-
   // remove blank acct rows
-  data = data.filter(row => {
+  data = data.filter(function(row) {
     var vals = row.slice(1, 9);
     var filtered = vals.filter(function(x) {
       return x !== "";
@@ -45,12 +42,10 @@ function cleanData_(data: any[][]) {
     var hasData = filtered.length > 0;
     return hasData;
   });
-
   // add headers back to data
   headers[0] = "Account";
   data.unshift(headers);
-
   return data;
 }
 
-export { cleanData_ };
+module.exports = { cleanData_: cleanData_ };

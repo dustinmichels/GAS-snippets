@@ -45,13 +45,9 @@ What changed?
 
 ## Code
 
-### `macros.ts`
-
-[email.ts](src/macros.ts ':include :type=code')
-
 ### `macros.js`
 
-[email.ts](build/macros.js ':include :type=code')
+[email.ts](src/macros.js ':include :type=code')
 
 ## Code Coverage
 

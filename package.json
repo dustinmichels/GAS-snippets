@@ -8,10 +8,11 @@
   },
   "nyc": {
     "include": [
-      "snippets/**/src/**/*.ts"
+      "snippets/**/src/**/*.ts",
+      "snippets/**/src/**/*.js"
     ],
     "extension": [
-      ".ts"
+      ".ts", ".js"
     ],
     "exclude": [
       "**/*.d.ts"
