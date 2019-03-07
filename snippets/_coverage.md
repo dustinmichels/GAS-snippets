@@ -1,0 +1,1 @@
+Unit tests for this code were written using the [mocha](https://mochajs.org/) testing framework & [chai](https://www.chaijs.com/) assertion library. Here is a report on code coverage, generated with [Istanbul](https://istanbul.js.org/).

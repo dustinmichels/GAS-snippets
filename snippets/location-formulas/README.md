@@ -26,6 +26,6 @@ Given a cell with a location in _Degrees/Minutes/Seconds_ (DMS) format, extract 
 
 ## Code Coverage
 
-Unit tests were written for this code using the [mocha](https://mochajs.org/) testing framework & [chai](https://www.chaijs.com/) assertion library. Here is a summary of test results, generated with [Istanbul](https://istanbul.js.org/).
+[coverage.md](../_coverage.md ':include')
 
 [tests](../../coverage/location-formulas/src/index.html ':include')
