@@ -31,6 +31,16 @@ When a new code snippet is added:
 - Give it a `README.md` following the structure of the existing projects.
 - Update `_sidebar.md`
 
+To generate docs locally:
+
+```bash
+# install docsify globally
+npm i docsify-cli -g
+
+# serve from base dir
+docsify serve .
+```
+
 ## Testing
 
 Run `npm run test` to run test files, using Mocha/Chai.
